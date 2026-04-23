@@ -133,21 +133,21 @@ OR use Live Server (recommended)
 ---
 
 ## 📸 Screenshots
-<img width="500" height="700" alt="Screenshot 2026-04-15 112508" src="https://github.com/user-attachments/assets/82d43aaa-8842-4fb9-b669-74c8f1a82a81" />
+<img width="900" height="400" alt="Screenshot 2026-04-15 112508" src="https://github.com/user-attachments/assets/82d43aaa-8842-4fb9-b669-74c8f1a82a81" />
 
-<img width="500" height="700" alt="Screenshot 2026-04-07 142702" src="https://github.com/user-attachments/assets/87c4230b-01c6-45bc-8501-41417d9eb1a9" />
+<img width="900" height="400" alt="Screenshot 2026-04-07 142702" src="https://github.com/user-attachments/assets/87c4230b-01c6-45bc-8501-41417d9eb1a9" />
 
-<img width="500" height="700" alt="Screenshot 2026-03-23 141816" src="https://github.com/user-attachments/assets/224095da-91ef-4c65-9916-7aca1f8a40de" />
+<img width="900" height="400" alt="Screenshot 2026-03-23 141816" src="https://github.com/user-attachments/assets/224095da-91ef-4c65-9916-7aca1f8a40de" />
 
-<img width="500" height="700" alt="Screenshot 2026-04-15 112653" src="https://github.com/user-attachments/assets/057c31b2-65e8-4786-8216-5495a0655be2" />
+<img width="900" height="400" alt="Screenshot 2026-04-15 112653" src="https://github.com/user-attachments/assets/057c31b2-65e8-4786-8216-5495a0655be2" />
 
-<img width="500" height="700" alt="Screenshot 2026-04-07 121133" src="https://github.com/user-attachments/assets/0397edba-0286-413b-bd1c-9e892d7c3ea9" />
+<img width="900" height="400" alt="Screenshot 2026-04-07 121133" src="https://github.com/user-attachments/assets/0397edba-0286-413b-bd1c-9e892d7c3ea9" />
 
-<img width="500" height="700" alt="Screenshot 2026-04-05 211946" src="https://github.com/user-attachments/assets/e63988b8-a6e4-422a-9e57-5850901f29b2" />
+<img width="900" height="400" alt="Screenshot 2026-04-05 211946" src="https://github.com/user-attachments/assets/e63988b8-a6e4-422a-9e57-5850901f29b2" />
 
-<img width="500" height="700" alt="Screenshot 2026-03-23 141511" src="https://github.com/user-attachments/assets/4cf80ed4-f85d-4390-99bd-726903c68b77" />
+<img width="900" height="400" alt="Screenshot 2026-03-23 141511" src="https://github.com/user-attachments/assets/4cf80ed4-f85d-4390-99bd-726903c68b77" />
 
-<img width="500" height="700" alt="Screenshot 2026-03-23 141538" src="https://github.com/user-attachments/assets/4582ce63-65cb-48c8-9f55-73801046434c" />
+<img width="900" height="400" alt="Screenshot 2026-03-23 141538" src="https://github.com/user-attachments/assets/4582ce63-65cb-48c8-9f55-73801046434c" />
 
 
 ---
