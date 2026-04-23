@@ -160,4 +160,6 @@ OR use Live Server (recommended)
 
 ## 📜 License
 
+
 This project is developed for educational purposes.
+
