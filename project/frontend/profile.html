@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2 id="profileTitle"></h2>
+
+    <input type="text" id="fullName">
+    <input type="number" id="age">
+
+    <select id="gender">
+        <option value="" id="genderDefault"></option>
+        <option value="Male" id="maleOption"></option>
+        <option value="Female" id="femaleOption"></option>
+        <option value="Other" id="otherOption"></option>
+    </select>
+
+    <h3 id="avatarText"></h3>
+
+    <div class="avatar-container">
+        <img src="images/boy1.png" class="avatar" onclick="selectAvatar('boy1.png')">
+        <img src="images/boy2.png" class="avatar" onclick="selectAvatar('boy2.png')">
+        <img src="images/girl1.png" class="avatar" onclick="selectAvatar('girl1.png')">
+        <img src="images/girl2.png" class="avatar" onclick="selectAvatar('girl2.png')">
+    </div>
+
+    <button id="saveBtn" onclick="saveProfile()"></button>
+
+</div>
+
+<!-- IMPORTANT: Script Order -->
+<script src="js/auth.js"></script>
+<script src="js/profile.js"></script>
+
+</body>
+</html>

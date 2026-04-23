@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>CyberSafety Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo" id="dashboardTitle">
+🛡 CyberSafety Education
+</div>
+
+<div class="profile-area">
+
+<img id="avatarCircle"
+src="images/boy1.png"
+class="profile-circle"
+onclick="toggleMenu()">
+
+</div>
+
+</div>
+
+
+<!-- PROFILE DROPDOWN -->
+
+<div id="profileMenu" class="dropdown">
+
+<p id="userName" class="profile-info"></p>
+<p id="userAge" class="profile-info"></p>
+<p id="progressText" class="profile-info"></p>
+
+<div class="progress-bar">
+<div id="progressFill"></div>
+</div>
+
+<div class="support-section">
+  <p>📧 support@cybersafety.com</p>
+  <p>📞 +91-9876543210</p>
+</div>
+
+<div id="certificateBtn"
+class="certificate-btn"
+onclick="downloadCertificate()">
+Download Certificate
+</div>
+
+<div id="logoutBtn" class="logout-btn"
+onclick="logout()"></div>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div class="dashboard-container">
+
+<h2 class="dashboard-heading" id="learningHeading"></h2>
+
+
+<div class="module-grid">
+
+<div id="m1" class="module-card"
+onclick="openModule('phishing')">
+</div>
+
+<div id="m2" class="module-card"
+onclick="openModule('scams')">
+</div>
+
+<div id="m3" class="module-card"
+onclick="openModule('threats')">
+</div>
+
+<div id="m4" class="module-card"
+onclick="openModule('cyberbullying')">
+</div>
+
+</div>
+
+<!-- QUICK LEARNING SECTION -->
+
+<div class="quick-section">
+
+<h2 id ="quickTitle" class="quick-heading">⚡ Quick Learning</h2>
+
+<!-- TUTORIAL -->
+<div class="quick-box">
+<h3 id="tutorialTitle">🎥 Tutorial Guides</h3>
+
+<button id="btn_t_phishing" onclick="openQuick('tutorial','phishing')">Phishing</button>
+<button id="btn_t_scams" onclick="openQuick('tutorial','scams')">Scams</button>
+<button id="btn_t_threats" onclick="openQuick('tutorial','threats')">Threats</button>
+<button id="btn_t_cyber" onclick="openQuick('tutorial','cyberbullying')">Cyberbullying</button>
+</div>
+
+<!-- NEWS -->
+<div class="quick-box">
+<h3 id="newsTitle">📰 Cyber Alerts & News Block</h3>
+
+<button id="btn_n_phishing" onclick="openQuick('news','phishing')">Phishing</button>
+<button id="btn_n_scams" onclick="openQuick('news','scams')">Scams</button>
+<button id="btn_n_threats" onclick="openQuick('news','threats')">Threats</button>
+<button id="btn_n_cyber" onclick="openQuick('news','cyberbullying')">Cyberbullying</button>
+</div>
+
+<!-- SCENARIO -->
+<div class="quick-box">
+<h3 id="scenarioTitle">⚠ Real Life Scenarios</h3>
+
+<button id="btn_s_phishing" onclick="openQuick('scenario','phishing')">Phishing</button>
+<button id="btn_s_scams" onclick="openQuick('scenario','scams')">Scams</button>
+<button id="btn_s_threats" onclick="openQuick('scenario','threats')">Threats</button>
+<button id="btn_s_cyber" onclick="openQuick('scenario','cyberbullying')">Cyberbullying</button>
+</div>
+
+</div>
+
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

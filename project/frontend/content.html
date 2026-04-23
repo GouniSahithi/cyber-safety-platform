@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Learning Content</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="content-wrapper">
+
+<h1 id="contentTitle"></h1>
+
+<div class="content-grid">
+
+<!-- LEFT SIDE -->
+<div class="left-panel">
+
+<h3 id="flashcardTitle"></h3>
+<button onclick="openFlashcard()" class="flash-btn" id="flashcardBtn"></button>
+
+<h3 id="keyPointsTitle"></h3>
+<ul id="keyPoints"></ul>
+
+<!-- NEW: CASE STUDY -->
+<h3 id="caseStudyTitle" style="display:none;"></h3>
+<div id="contentCaseStudy"></div>
+
+<!-- NEW: REAL SCENARIO -->
+<h3 id="realScenarioTitle" style="display:none;"></h3>
+<div id="contentRealScenario"></div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+<div class="right-panel">
+
+<h3 id="videoTitle"></h3>
+
+<div class="video-container">
+<iframe id="contentVideo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<h3 id="explanationTitle"></h3>
+<div id="contentExplanation" class="explanation-box"></div>
+
+</div>
+
+</div>
+
+<div class="quiz-container">
+<button onclick="startQuiz()" class="quiz-btn" id="quizBtn"></button>
+</div>
+
+</div>
+
+<script src="js/kidsContent.js"></script>
+<script src="js/youthContent.js"></script>
+<script src="js/adultContent.js"></script>
+<script src="js/contentLoader.js"></script>
+
+</body>
+</html>

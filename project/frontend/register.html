@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+<h2 id="registerTitle"></h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<button id="registerBtn"></button>
+
+<p id="loginText"></p>
+
+</div>
+
+<script src="js/auth.js"></script>
+
+<script>
+window.onload = function () {
+
+    applyRegisterLanguage();
+
+    document
+        .getElementById("registerBtn")
+        .addEventListener("click", registerUser);
+
+};
+</script>
+
+</body>
+</html>

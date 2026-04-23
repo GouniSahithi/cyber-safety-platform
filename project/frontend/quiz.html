@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Cyber Safety Quiz</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.quiz-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.quiz-question{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.quiz-actions{
+margin-top:20px;
+display:flex;
+justify-content:space-between;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+<div class="quiz-card">
+
+<h2 id="quizTitle"></h2>
+
+<p class="quiz-subtitle" id="quizSubtitle"></p>
+
+<div id="quizContainer" class="quiz-grid"></div>
+
+<div class="quiz-actions">
+
+<button onclick="goBack()" id="backBtn"></button>
+
+<button onclick="submitQuiz()" id="submitBtn"></button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/quiz.js"></script>
+
+</body>
+
+</html>

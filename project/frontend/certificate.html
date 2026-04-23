@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Cyber Safety Certificates</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f5f5f5;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:40px;
+border:5px solid #1e88e5;
+width:700px;
+text-align:center;
+}
+
+.module{
+margin:15px;
+padding:15px;
+border:1px solid #ccc;
+border-radius:8px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+button{
+padding:8px 15px;
+border:none;
+border-radius:5px;
+background:#1e88e5;
+color:white;
+cursor:pointer;
+}
+
+button.locked{
+background:gray;
+cursor:not-allowed;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 id="certTitle"></h1>
+
+<button id="backBtn" onclick="goDashboard()" style="
+margin-bottom:20px;
+padding:8px 15px;
+background:#555;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;">
+</button>
+
+<p id="certSubtitle"></p>
+
+<div id="moduleList"></div>
+
+</div>
+
+<script>
+
+/* =========================
+LANGUAGE
+========================= */
+
+const lang = localStorage.getItem("language") || "en";
+
+/* =========================
+TRANSLATIONS
+========================= */
+
+const translations = {
+
+en:{
+title:"Cyber Safety Certificates",
+back:"⬅ Back to Dashboard",
+subtitle:"Select a completed module to download certificate",
+download:"Download",
+locked:"Locked",
+
+modules:{
+phishing:"Phishing Awareness",
+scams:"Online Scams",
+threats:"Identify Threats",
+identity:"Identify Threats",
+cyberbullying:"Cyberbullying"
+},
+
+certTitle:"Cyber Safety Certificate",
+certLine1:"This certifies that",
+certLine2:"has successfully completed the module",
+certLine3:"from the Cyber Safety Education Program"
+},
+
+te:{
+title:"సైబర్ భద్రత సర్టిఫికేట్లు",
+back:"⬅ డాష్‌బోర్డ్‌కు వెనక్కి",
+subtitle:"పూర్తి చేసిన మాడ్యూల్‌ను ఎంచుకుని సర్టిఫికేట్ డౌన్‌లోడ్ చేయండి",
+download:"డౌన్‌లోడ్",
+locked:"లాక్",
+
+modules:{
+phishing:"ఫిషింగ్ అవగాహన",
+scams:"ఆన్‌లైన్ మోసాలు",
+threats:"సైబర్ ప్రమాదాలు",
+identity:"సైబర్ ప్రమాదాలు",
+cyberbullying:"సైబర్ బులీయింగ్"
+},
+
+certTitle:"సైబర్ భద్రత సర్టిఫికేట్",
+certLine1:"ఇది ధృవీకరిస్తోంది",
+certLine2:"ఈ మాడ్యూల్‌ను విజయవంతంగా పూర్తి చేశారు",
+certLine3:"సైబర్ భద్రత విద్య కార్యక్రమం నుండి"
+},
+
+hi:{
+title:"साइबर सुरक्षा प्रमाणपत्र",
+back:"⬅ डैशबोर्ड पर वापस",
+subtitle:"पूरा किए गए मॉड्यूल को चुनें और प्रमाणपत्र डाउनलोड करें",
+download:"डाउनलोड",
+locked:"लॉक",
+
+modules:{
+phishing:"फिशिंग जागरूकता",
+scams:"ऑनलाइन धोखाधड़ी",
+threats:"खतरों की पहचान",
+identity:"खतरों की पहचान",
+cyberbullying:"साइबर बुलिंग"
+},
+
+certTitle:"साइबर सुरक्षा प्रमाणपत्र",
+certLine1:"यह प्रमाणित करता है कि",
+certLine2:"ने इस मॉड्यूल को सफलतापूर्वक पूरा किया है",
+certLine3:"साइबर सुरक्षा शिक्षा कार्यक्रम से"
+}
+
+};
+
+const t = translations[lang] || translations.en;
+
+/* =========================
+SET UI TEXT
+========================= */
+
+document.getElementById("certTitle").innerText = t.title;
+document.getElementById("backBtn").innerText = t.back;
+document.getElementById("certSubtitle").innerText = t.subtitle;
+
+/* =========================
+MODULE LIST
+========================= */
+
+const modules = [
+{key:"phishing"},
+{key:"scams"},
+{key:"threats"},
+{key:"cyberbullying"}
+];
+
+let fullName = localStorage.getItem("fullName") || "User";
+
+const container = document.getElementById("moduleList");
+
+modules.forEach(module=>{
+
+const userId = localStorage.getItem("userId");
+let moduleKey = module.key;
+
+if(module.key === "threats"){
+  moduleKey = "identity";
+}
+
+const completed = localStorage.getItem(userId + "_" + moduleKey + "_completed");
+
+const div = document.createElement("div");
+div.className="module";
+
+const moduleName = t.modules[module.key];
+
+if(completed === "true"){
+
+div.innerHTML = `
+<span>${moduleName}</span>
+<button onclick="generateCertificate('${module.key}')">
+${t.download}
+</button>
+`;
+
+}else{
+
+div.innerHTML = `
+<span>${moduleName}</span>
+<button class="locked">
+${t.locked}
+</button>
+`;
+
+}
+
+container.appendChild(div);
+
+});
+
+/* =========================
+GENERATE CERTIFICATE
+========================= */
+
+function generateCertificate(moduleKey){
+
+if(moduleKey === "threats"){
+  moduleKey = "identity";
+}
+
+const moduleName = t.modules[moduleKey];
+
+const certificateHTML = `
+<div style="text-align:center;font-family:Arial;padding:50px;border:5px solid #1e88e5">
+<h1 style="color:#1e88e5">${t.certTitle}</h1>
+
+<p>${t.certLine1}</p>
+
+<h2>${fullName}</h2>
+
+<p>${t.certLine2}</p>
+
+<h3>${moduleName.toUpperCase()}</h3>
+
+<p>${t.certLine3}</p>
+
+</div>
+`;
+
+const newWindow = window.open("");
+newWindow.document.write(certificateHTML);
+newWindow.print();
+
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+function goDashboard(){
+window.location.href = "dashboard.html";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+<h2 id="loginTitle"></h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<button id="loginBtn"></button>
+
+<p id="registerText"></p>
+
+</div>
+
+<script src="js/auth.js"></script>
+
+<script>
+window.onload = function () {
+
+    applyLoginLanguage();
+
+    document
+        .getElementById("loginBtn")
+        .addEventListener("click", loginUser);
+
+};
+</script>
+
+</body>
+</html>
