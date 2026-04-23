@@ -99,8 +99,9 @@ mvn spring-boot:run
 
 ### 3️⃣ Run Frontend
 
-Open `index.html` in your browser
-OR use Live Server (recommended)
+python -m http.server 5500
+
+http://localhost:5500/  in browser
 
 ---
 
